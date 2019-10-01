@@ -10,22 +10,16 @@ using System.Windows.Forms;
 
 namespace PPE3_GSB_BalemrogV2
 {
-    public partial class Menu : Form
+    public partial class Menu3 : Form
     {
-        public Menu()
+        public Menu3()
         {
             InitializeComponent();
         }
 
-        private void Mission1ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void Menu3_Load(object sender, EventArgs e)
         {
-            
-        }
 
-        private void Mission3ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Menu3 m3 = new Menu3();
-            m3.Show();
         }
     }
 }
