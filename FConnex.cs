@@ -16,5 +16,26 @@ namespace PPE3_GSB_BalemrogV2
         {
             InitializeComponent();
         }
+
+        private void FConnex_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnOkConn_Click(object sender, EventArgs e)
+        {
+            switch(ControlleurM1.verifierCode(txtID.Text, txtMdp.Text))
+            {
+                case 0:
+                    MessageBox.Show("l'identifiant saisi n'est pas valide");
+                    break;
+                case 1:
+                    break;
+                case 2:
+                    MessageBox.Show("votre code n'est pas bon");
+                    break;
+
+            }
+        }
     }
 }
