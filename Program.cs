@@ -17,7 +17,8 @@ namespace PPE3_GSB_BalemrogV2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Menu());
+            ControlleurM1.init();
+            Application.Run(new FConnex());
         }
     }
 }

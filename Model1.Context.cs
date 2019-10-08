@@ -40,7 +40,6 @@ namespace PPE3_GSB_BalemrogV2
         public virtual DbSet<Region> Region { get; set; }
         public virtual DbSet<Secteur> Secteur { get; set; }
         public virtual DbSet<SPECIALITE> SPECIALITE { get; set; }
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Visiteur> Visiteur { get; set; }
        
     }
