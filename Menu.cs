@@ -27,5 +27,10 @@ namespace PPE3_GSB_BalemrogV2
             Menu3 m3 = new Menu3();
             m3.Show();
         }
+
+        private void ProfilToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -35,29 +35,37 @@ namespace PPE3_GSB_BalemrogV2
             {
                 sb.Append(hash[i].ToString("x2"));
             }
-            return sb.ToString();
+            return "0x"+sb.ToString().ToUpper();
         }
-
+        //Recupere un objet utilisateur en fonction de son id
         public static Visiteur recupVisiteurID(string idV)
         {
             Visiteur unVisiteur = null;
            
                 var LQuery = maConn.Visiteur.ToList()
                            .Where(x => x.identifiant == idV);
-                 unVisiteur = (Visiteur)LQuery.ToList().First();
-            
+            if (LQuery.ToList().Count > 0)
+            {
+                unVisiteur = (Visiteur)LQuery.ToList().First();
+            }
+                           
             return unVisiteur;
         }
 
+       
         public static int verifierCode(string idV, string mdpV)
         {
             int vretour = 0; //ID mauvais
+            string visiteurid, idhash;
             Visiteur unVisiteur;
-            if ((unVisiteur = recupVisiteurID(idV)) == null)
+            if ((unVisiteur = recupVisiteurID(idV)) != null)
             {
                 vretour = 2; // mdp mauvais
-                if (unVisiteur.password == GetMd5Hash(mdpV))
+                visiteurid = unVisiteur.password.ToString();
+                idhash = GetMd5Hash(mdpV.ToString());
+                if (unVisiteur.password.ToString() == GetMd5Hash(mdpV.ToString ()))
                 {
+                   
                     vretour = 1; // tout est bon
                     
                 }
