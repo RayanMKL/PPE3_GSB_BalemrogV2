@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="BalemrogBDDModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="BalemrogBDDModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Etat">
           <Key>
             <PropertyRef Name="id" />
@@ -159,6 +159,16 @@
           </Key>
           <Property Name="idVisiteur" Type="char" MaxLength="3" Nullable="false" />
           <Property Name="idRegion" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UTILISATEUR">
+          <Key>
+            <PropertyRef Name="idUtilisateur" />
+          </Key>
+          <Property Name="idUtilisateur" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="passwd" Type="varchar" MaxLength="100" />
+          <Property Name="droits" Type="int" />
+          <Property Name="actif" Type="bit" />
+          <Property Name="nbessais" Type="int" />
         </EntityType>
         <EntityType Name="Visiteur">
           <Key>
@@ -413,6 +423,7 @@
           <EntitySet Name="SPECIALITE" EntityType="Self.SPECIALITE" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Travailler" EntityType="Self.Travailler" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UTILISATEUR" EntityType="Self.UTILISATEUR" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Visiteur" EntityType="Self.Visiteur" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK__fichefrai__idEta__1ED998B2" Association="Self.FK__fichefrai__idEta__1ED998B2">
             <End Role="Etat" EntitySet="Etat" />
@@ -487,8 +498,7 @@
             <End Role="RAPPORT" EntitySet="RAPPORT" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="BalemrogBDDModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -974,7 +984,18 @@
             <End Role="Region" EntitySet="Region" />
             <End Role="Visiteur" EntitySet="Visiteur" />
           </AssociationSet>
+          <EntitySet Name="UTILISATEUR" EntityType="BalemrogBDDModel.UTILISATEUR" />
         </EntityContainer>
+        <EntityType Name="UTILISATEUR">
+          <Key>
+            <PropertyRef Name="idUtilisateur" />
+          </Key>
+          <Property Name="idUtilisateur" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="passwd" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="droits" Type="Int32" />
+          <Property Name="actif" Type="Boolean" />
+          <Property Name="nbessais" Type="Int32" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1164,6 +1185,17 @@
               <ScalarProperty Name="idVisiteur" ColumnName="idVisiteur" />
             </EndProperty>
           </AssociationSetMapping>
+          <EntitySetMapping Name="UTILISATEUR">
+            <EntityTypeMapping TypeName="BalemrogBDDModel.UTILISATEUR">
+              <MappingFragment StoreEntitySet="UTILISATEUR">
+                <ScalarProperty Name="nbessais" ColumnName="nbessais" />
+                <ScalarProperty Name="actif" ColumnName="actif" />
+                <ScalarProperty Name="droits" ColumnName="droits" />
+                <ScalarProperty Name="passwd" ColumnName="passwd" />
+                <ScalarProperty Name="idUtilisateur" ColumnName="idUtilisateur" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
