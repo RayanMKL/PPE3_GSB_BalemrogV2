@@ -41,6 +41,6 @@ namespace PPE3_GSB_BalemrogV2
         public virtual DbSet<Secteur> Secteur { get; set; }
         public virtual DbSet<SPECIALITE> SPECIALITE { get; set; }
         public virtual DbSet<Visiteur> Visiteur { get; set; }
-       
+        public virtual DbSet<UTILISATEUR> UTILISATEUR { get; set; }
     }
 }
