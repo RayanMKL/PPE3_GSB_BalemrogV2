@@ -55,6 +55,7 @@
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(100, 20);
             this.txtID.TabIndex = 1;
+            this.txtID.Text = "dandre";
             // 
             // txtMdp
             // 
@@ -63,6 +64,7 @@
             this.txtMdp.PasswordChar = '*';
             this.txtMdp.Size = new System.Drawing.Size(100, 20);
             this.txtMdp.TabIndex = 2;
+            this.txtMdp.Text = "dandre";
             // 
             // lblID
             // 

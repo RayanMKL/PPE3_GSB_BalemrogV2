@@ -24,6 +24,21 @@ namespace PPE3_GSB_BalemrogV2
             txtVilleV.Text = leVisiteur.ville.ToString();
             txtDateEmbV.Text = leVisiteur.dateEmbauche.ToString();
             txtIdV.Text = leVisiteur.identifiant.ToString();
+
+            bsVisiteur.DataSource = leVisiteur.Region.ToList();
+            dgvResponsabilité.DataSource = bsVisiteur;
+            dgvResponsabilité.Columns[0].HeaderText = "id Visiteur";
+            dgvResponsabilité.Columns[1].HeaderText = "Libellé Region";
+            dgvResponsabilité.Columns[0].Visible = false;
+            dgvResponsabilité.Columns[1].Visible = false;
+            dgvResponsabilité.Columns[4].Visible = false;
+            dgvResponsabilité.Columns[5].Visible = false;
+            dgvResponsabilité.Columns[6].Visible = false;
+           
+
+
+
+
         }
 
         private void TxtNomV_TextChanged(object sender, EventArgs e)
@@ -47,6 +62,25 @@ namespace PPE3_GSB_BalemrogV2
         private void LbRegionV_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void BsVisiteur_CurrentChanged(object sender, EventArgs e)
+        {
+         /* 
+            Visiteur leVisiteur = ControlleurM1.leVisiteurCo;
+            bsVisiteur.DataSource = leVisiteur.Region.ToList();
+            dgvResponsabilité.DataSource = bsVisiteur;
+            dgvResponsabilité.Columns[0].HeaderText = "id Visiteur";
+            dgvResponsabilité.Columns[1].HeaderText = "Libellé Region";
+            cboTest.DataSource = bsVisiteur;
+            
+             */
+        }
+
+        private void BtnModifmdp_Click(object sender, EventArgs e)
+        {
+            FModifmdp fmmdp = new FModifmdp();
+            fmmdp.Show();
         }
     }
 }

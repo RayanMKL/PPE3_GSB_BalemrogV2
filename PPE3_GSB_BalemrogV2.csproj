@@ -76,6 +76,12 @@
     <Compile Include="fichefrais.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="FModifmdp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FModifmdp.Designer.cs">
+      <DependentUpon>FModifmdp.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +158,9 @@
     </Compile>
     <EmbeddedResource Include="FConnex.resx">
       <DependentUpon>FConnex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FModifmdp.resx">
+      <DependentUpon>FModifmdp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>

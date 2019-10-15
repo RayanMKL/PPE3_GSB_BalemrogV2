@@ -104,6 +104,16 @@ namespace PPE3_GSB_BalemrogV2
             return vretour;
         }
 
+        public static Object responsabilitéParVisiteur(string idV)
+        {
+            var LQuery = maConn.Region.ToList()
+                          .Where(x => x.idVisiteur == idV)
+                          .Select(x => new { x.idVisiteur, x.libRegion})
+                          .OrderBy(x => x.idVisiteur);
+            return LQuery.ToList();
+
+        }
+
 
 
         }
