@@ -46,8 +46,11 @@
             this.lblIdV = new System.Windows.Forms.Label();
             this.btnOKV = new System.Windows.Forms.Button();
             this.bsVisiteur = new System.Windows.Forms.BindingSource(this.components);
-            this.lbRegionV = new System.Windows.Forms.ListBox();
+            this.dgvResponsabilité = new System.Windows.Forms.DataGridView();
+            this.lblResponsabilité = new System.Windows.Forms.Label();
+            this.btnModifmdp = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.bsVisiteur)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvResponsabilité)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAnnuler
@@ -184,21 +187,45 @@
             this.btnOKV.UseVisualStyleBackColor = true;
             this.btnOKV.Click += new System.EventHandler(this.BtnOKV_Click);
             // 
-            // lbRegionV
+            // bsVisiteur
             // 
-            this.lbRegionV.FormattingEnabled = true;
-            this.lbRegionV.Location = new System.Drawing.Point(384, 67);
-            this.lbRegionV.Name = "lbRegionV";
-            this.lbRegionV.Size = new System.Drawing.Size(92, 95);
-            this.lbRegionV.TabIndex = 18;
-            this.lbRegionV.SelectedIndexChanged += new System.EventHandler(this.LbRegionV_SelectedIndexChanged);
+            this.bsVisiteur.CurrentChanged += new System.EventHandler(this.BsVisiteur_CurrentChanged);
+            // 
+            // dgvResponsabilité
+            // 
+            this.dgvResponsabilité.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvResponsabilité.Location = new System.Drawing.Point(288, 64);
+            this.dgvResponsabilité.Name = "dgvResponsabilité";
+            this.dgvResponsabilité.Size = new System.Drawing.Size(236, 150);
+            this.dgvResponsabilité.TabIndex = 18;
+            // 
+            // lblResponsabilité
+            // 
+            this.lblResponsabilité.AutoSize = true;
+            this.lblResponsabilité.Location = new System.Drawing.Point(296, 40);
+            this.lblResponsabilité.Name = "lblResponsabilité";
+            this.lblResponsabilité.Size = new System.Drawing.Size(180, 13);
+            this.lblResponsabilité.TabIndex = 19;
+            this.lblResponsabilité.Text = "Region dont vous êtes responsable :";
+            // 
+            // btnModifmdp
+            // 
+            this.btnModifmdp.Location = new System.Drawing.Point(105, 224);
+            this.btnModifmdp.Name = "btnModifmdp";
+            this.btnModifmdp.Size = new System.Drawing.Size(165, 23);
+            this.btnModifmdp.TabIndex = 20;
+            this.btnModifmdp.Text = "Modifier mon mot de passe";
+            this.btnModifmdp.UseVisualStyleBackColor = true;
+            this.btnModifmdp.Click += new System.EventHandler(this.BtnModifmdp_Click);
             // 
             // ProfilVisiteur
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(536, 327);
-            this.Controls.Add(this.lbRegionV);
+            this.Controls.Add(this.btnModifmdp);
+            this.Controls.Add(this.lblResponsabilité);
+            this.Controls.Add(this.dgvResponsabilité);
             this.Controls.Add(this.btnOKV);
             this.Controls.Add(this.txtIdV);
             this.Controls.Add(this.lblIdV);
@@ -218,6 +245,7 @@
             this.Name = "ProfilVisiteur";
             this.Text = "ProfilVisiteur";
             ((System.ComponentModel.ISupportInitialize)(this.bsVisiteur)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvResponsabilité)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -241,6 +269,8 @@
         private System.Windows.Forms.Label lblIdV;
         private System.Windows.Forms.Button btnOKV;
         private System.Windows.Forms.BindingSource bsVisiteur;
-        private System.Windows.Forms.ListBox lbRegionV;
+        private System.Windows.Forms.DataGridView dgvResponsabilité;
+        private System.Windows.Forms.Label lblResponsabilité;
+        private System.Windows.Forms.Button btnModifmdp;
     }
 }

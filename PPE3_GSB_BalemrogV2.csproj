@@ -60,7 +60,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CompteRendu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CompteRendu.Designer.cs">
+      <DependentUpon>CompteRendu.cs</DependentUpon>
+    </Compile>
     <Compile Include="ControlleurM1.cs" />
+    <Compile Include="ControlleurM2.cs" />
     <Compile Include="Etat.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -75,6 +82,12 @@
     </Compile>
     <Compile Include="fichefrais.cs">
       <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FModifmdp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FModifmdp.Designer.cs">
+      <DependentUpon>FModifmdp.cs</DependentUpon>
     </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
@@ -99,6 +112,12 @@
     </Compile>
     <Compile Include="MEDICAMENT.cs">
       <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Menu2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu2.Designer.cs">
+      <DependentUpon>Menu2.cs</DependentUpon>
     </Compile>
     <Compile Include="Menu3.cs">
       <SubType>Form</SubType>
@@ -165,8 +184,14 @@
     <EmbeddedResource Include="FConnex.resx">
       <DependentUpon>FConnex.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FModifmdp.resx">
+      <DependentUpon>FModifmdp.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu2.resx">
+      <DependentUpon>Menu2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu3.resx">
       <DependentUpon>Menu3.cs</DependentUpon>
