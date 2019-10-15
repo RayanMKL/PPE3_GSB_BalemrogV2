@@ -30,7 +30,13 @@ namespace PPE3_GSB_BalemrogV2
 
         private void ProfilToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            ProfilVisiteur pv1 = new ProfilVisiteur();
+            pv1.Show();
+        }
 
+        private void RésponsabilitéToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
         }
 
         private void Mission2ToolStripMenuItem_Click(object sender, EventArgs e)

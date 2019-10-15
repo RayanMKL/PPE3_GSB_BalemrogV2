@@ -119,6 +119,12 @@
     <Compile Include="Menu3.Designer.cs">
       <DependentUpon>Menu3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mission3AddModif.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mission3AddModif.Designer.cs">
+      <DependentUpon>Mission3AddModif.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -174,6 +180,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Menu3.resx">
       <DependentUpon>Menu3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mission3AddModif.resx">
+      <DependentUpon>Mission3AddModif.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProfilVisiteur.resx">
       <DependentUpon>ProfilVisiteur.cs</DependentUpon>

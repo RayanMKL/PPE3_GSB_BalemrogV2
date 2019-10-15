@@ -10,6 +10,7 @@ namespace PPE3_GSB_BalemrogV2
     class ControlleurM1
     {
         private static BalemrogBDDEntities maConn;
+        public static Visiteur leVisiteurCo;
         public static BalemrogBDDEntities getMaConnexion()
         {
             return maConn;
@@ -56,25 +57,54 @@ namespace PPE3_GSB_BalemrogV2
         public static int verifierCode(string idV, string mdpV)
         {
             int vretour = 0; //ID mauvais
-            string visiteurid, idhash;
+            
             Visiteur unVisiteur;
             if ((unVisiteur = recupVisiteurID(idV)) != null)
             {
                 vretour = 2; // mdp mauvais
-                visiteurid = unVisiteur.password.ToString();
-                idhash = GetMd5Hash(mdpV.ToString());
+                
+
+                // tout est bon
                 if (unVisiteur.password.ToString() == GetMd5Hash(mdpV.ToString ()))
                 {
-                   
-                    vretour = 1; // tout est bon
+                    leVisiteurCo = unVisiteur;
+                    vretour = 1; 
                     
                 }
 
             }
             return vretour;
         }
-          
-        
-        
-    }
+
+
+        //Modifier info visiteur
+        public static bool ModifVisteur(string nomV, string prenomV, string rueV, string cpV, string villeV, string dateEmbV, string idV)
+        {
+            bool vretour = true;
+            leVisiteurCo.nom = nomV;
+            leVisiteurCo.prenom = prenomV;
+            leVisiteurCo.rue = rueV;
+            leVisiteurCo.cp = cpV;
+            leVisiteurCo.ville = villeV;
+            leVisiteurCo.dateEmbauche = dateEmbV;
+            leVisiteurCo.identifiant = idV;
+
+            try
+            {
+                maConn.SaveChanges();
+            }
+            catch (Exception e)
+            {
+                System.Windows.Forms.MessageBox.Show(e.Message + " " + e.InnerException.InnerException.Message);
+                vretour = false;
+
+            }
+
+
+            return vretour;
+        }
+
+
+
+        }
 }
