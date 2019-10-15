@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PPE3_GSB_BalemrogV2
 {
-    public partial class Mission3AddModif : Form
+    public partial class Mission3Modif : Form
     {
-        public Mission3AddModif()
+        public Mission3Modif()
         {
             InitializeComponent();
         }

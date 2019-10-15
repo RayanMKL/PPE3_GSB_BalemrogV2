@@ -24,14 +24,19 @@ namespace PPE3_GSB_BalemrogV2
 
         private void BtnModif_Click(object sender, EventArgs e)
         {
-            Mission3AddModif mAM = new Mission3AddModif();
-            mAM.Show();
+            Mission3Modif missionM = new Mission3Modif();
+            missionM.Show();
         }
 
         private void BtnAdd_Click(object sender, EventArgs e)
         {
-            Mission3AddModif mAM = new Mission3AddModif();
-            mAM.Show();
+            Mission3Add missionA = new Mission3Add();
+            missionA.Show();
+        }
+
+        private void Label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
