@@ -52,21 +52,22 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label1.Location = new System.Drawing.Point(17, 47);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(191, 17);
+            this.label1.Size = new System.Drawing.Size(127, 17);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Liste fiche de frais modifiable";
+            this.label1.Text = "Liste fiche de frais:";
+            this.label1.Click += new System.EventHandler(this.Label1_Click);
             // 
             // dgvListeFiche
             // 
             this.dgvListeFiche.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvListeFiche.Location = new System.Drawing.Point(20, 85);
             this.dgvListeFiche.Name = "dgvListeFiche";
-            this.dgvListeFiche.Size = new System.Drawing.Size(419, 240);
+            this.dgvListeFiche.Size = new System.Drawing.Size(415, 279);
             this.dgvListeFiche.TabIndex = 2;
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(85, 347);
+            this.btnAdd.Location = new System.Drawing.Point(69, 393);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 23);
             this.btnAdd.TabIndex = 3;
@@ -76,7 +77,7 @@
             // 
             // btnModif
             // 
-            this.btnModif.Location = new System.Drawing.Point(262, 347);
+            this.btnModif.Location = new System.Drawing.Point(275, 393);
             this.btnModif.Name = "btnModif";
             this.btnModif.Size = new System.Drawing.Size(75, 23);
             this.btnModif.TabIndex = 4;

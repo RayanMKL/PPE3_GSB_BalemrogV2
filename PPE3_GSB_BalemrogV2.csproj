@@ -106,11 +106,17 @@
     <Compile Include="Menu3.Designer.cs">
       <DependentUpon>Menu3.cs</DependentUpon>
     </Compile>
-    <Compile Include="Mission3AddModif.cs">
+    <Compile Include="Mission3Add.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Mission3AddModif.Designer.cs">
-      <DependentUpon>Mission3AddModif.cs</DependentUpon>
+    <Compile Include="Mission3Add.Designer.cs">
+      <DependentUpon>Mission3Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mission3Modif.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mission3Modif.Designer.cs">
+      <DependentUpon>Mission3Modif.cs</DependentUpon>
     </Compile>
     <Compile Include="Model1.Context.cs">
       <AutoGen>True</AutoGen>
@@ -165,8 +171,11 @@
     <EmbeddedResource Include="Menu3.resx">
       <DependentUpon>Menu3.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Mission3AddModif.resx">
-      <DependentUpon>Mission3AddModif.cs</DependentUpon>
+    <EmbeddedResource Include="Mission3Add.resx">
+      <DependentUpon>Mission3Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mission3Modif.resx">
+      <DependentUpon>Mission3Modif.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProfilVisiteur.resx">
       <DependentUpon>ProfilVisiteur.cs</DependentUpon>
