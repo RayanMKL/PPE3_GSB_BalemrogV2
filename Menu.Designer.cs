@@ -34,9 +34,11 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.missionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mission1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mission2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mission3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.profilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mission2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.comptesrendusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.visiteursToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mission3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -95,11 +97,35 @@
             this.mission1ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.mission1ToolStripMenuItem.Text = "Mission 1";
             // 
+            // profilToolStripMenuItem
+            // 
+            this.profilToolStripMenuItem.Name = "profilToolStripMenuItem";
+            this.profilToolStripMenuItem.Size = new System.Drawing.Size(102, 22);
+            this.profilToolStripMenuItem.Text = "Profil";
+            this.profilToolStripMenuItem.Click += new System.EventHandler(this.ProfilToolStripMenuItem_Click);
+            // 
             // mission2ToolStripMenuItem
             // 
+            this.mission2ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.comptesrendusToolStripMenuItem,
+            this.visiteursToolStripMenuItem});
             this.mission2ToolStripMenuItem.Name = "mission2ToolStripMenuItem";
             this.mission2ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.mission2ToolStripMenuItem.Text = "Mission 2";
+            this.mission2ToolStripMenuItem.Click += new System.EventHandler(this.Mission2ToolStripMenuItem_Click);
+            // 
+            // comptesrendusToolStripMenuItem
+            // 
+            this.comptesrendusToolStripMenuItem.Name = "comptesrendusToolStripMenuItem";
+            this.comptesrendusToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.comptesrendusToolStripMenuItem.Text = "Comptes-rendus";
+            this.comptesrendusToolStripMenuItem.Click += new System.EventHandler(this.ComptesrendusToolStripMenuItem_Click);
+            // 
+            // visiteursToolStripMenuItem
+            // 
+            this.visiteursToolStripMenuItem.Name = "visiteursToolStripMenuItem";
+            this.visiteursToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.visiteursToolStripMenuItem.Text = "Visiteurs";
             // 
             // mission3ToolStripMenuItem
             // 
@@ -107,13 +133,6 @@
             this.mission3ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.mission3ToolStripMenuItem.Text = "Mission 3";
             this.mission3ToolStripMenuItem.Click += new System.EventHandler(this.Mission3ToolStripMenuItem_Click);
-            // 
-            // profilToolStripMenuItem
-            // 
-            this.profilToolStripMenuItem.Name = "profilToolStripMenuItem";
-            this.profilToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.profilToolStripMenuItem.Text = "Profil";
-            this.profilToolStripMenuItem.Click += new System.EventHandler(this.ProfilToolStripMenuItem_Click);
             // 
             // Menu
             // 
@@ -127,6 +146,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Menu";
             this.Text = "MENU";
+            this.Load += new System.EventHandler(this.Menu_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -145,6 +165,8 @@
         private System.Windows.Forms.ToolStripMenuItem mission2ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mission3ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem profilToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem comptesrendusToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem visiteursToolStripMenuItem;
     }
 }
 
