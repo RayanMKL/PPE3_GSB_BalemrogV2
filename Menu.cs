@@ -32,5 +32,21 @@ namespace PPE3_GSB_BalemrogV2
         {
 
         }
+
+        private void Mission2ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GestionVisite m2 = new GestionVisite();
+            m2.Show();
+        }
+
+        private void ComptesrendusToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Menu_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
