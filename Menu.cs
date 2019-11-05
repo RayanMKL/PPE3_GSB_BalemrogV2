@@ -55,5 +55,11 @@ namespace PPE3_GSB_BalemrogV2
         {
 
         }
+
+        private void LesVisiteurToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FVisiteurs fv = new FVisiteurs();
+            fv.Show();
+        }
     }
 }

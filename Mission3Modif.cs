@@ -14,7 +14,7 @@ namespace PPE3_GSB_BalemrogV2
     {
         public Mission3Modif()
         {
-            InitializeComponent();
         }
-    }
+
+    }   
 }

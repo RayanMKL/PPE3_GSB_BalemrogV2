@@ -82,5 +82,10 @@ namespace PPE3_GSB_BalemrogV2
             FModifmdp fmmdp = new FModifmdp();
             fmmdp.Show();
         }
+
+        private void ProfilVisiteur_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

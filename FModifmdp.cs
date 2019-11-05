@@ -42,7 +42,22 @@ namespace PPE3_GSB_BalemrogV2
         {
             if (this.txtNouveauMdp.Text == this.txtConfirmeNewMdp.Text && ControlleurM1.verifierCode(ControlleurM1.leVisiteurCo.identifiant, this.txtAncienMdp.Text) == 1)
             {
-                MessageBox.Show("tout est bon");
+
+                if (ControlleurM1.modifierMDP(this.txtNouveauMdp.Text))
+                {
+                   if( MessageBox.Show("mot de passe modifié") == DialogResult.OK)
+                    {
+                        this.Close();
+                    }
+
+                }
+                else
+                {
+                    if(MessageBox.Show("Erreur") == DialogResult.OK)
+                    {
+                        this.Close();
+                    }
+                }
 
 
             }

@@ -20,6 +20,8 @@ namespace PPE3_GSB_BalemrogV2
             Application.SetCompatibleTextRenderingDefault(false);
             ControlleurM1.init();
             ControlleurM2.init();
+            ControlleurM3.init();
+
             Application.Run(new FConnex());
         }
     }

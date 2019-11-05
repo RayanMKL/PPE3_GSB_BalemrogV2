@@ -19,7 +19,8 @@ namespace PPE3_GSB_BalemrogV2
 
         private void Menu3_Load(object sender, EventArgs e)
         {
-
+            bsFicheFrais.DataSource = ControlleurM3.listeFicheFrais();
+            dgvListeFiche.DataSource = bsFicheFrais;
         }
 
         private void BtnModif_Click(object sender, EventArgs e)
