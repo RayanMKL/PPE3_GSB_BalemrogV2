@@ -37,19 +37,25 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.cboPracticien = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnDetail = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtNumRapport = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.dgvPracticien = new System.Windows.Forms.DataGridView();
             this.bsPracticien = new System.Windows.Forms.BindingSource(this.components);
             this.dtpRapport = new System.Windows.Forms.DateTimePicker();
+            this.bsRapport = new System.Windows.Forms.BindingSource(this.components);
+            this.cboMotif = new System.Windows.Forms.ComboBox();
+            this.bsMotif = new System.Windows.Forms.BindingSource(this.components);
+            this.bsOffrir = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPracticien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsPracticien)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsRapport)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsMotif)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsOffrir)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -124,14 +130,15 @@
             this.cboPracticien.TabIndex = 7;
             this.cboPracticien.Format += new System.Windows.Forms.ListControlConvertEventHandler(this.CboPracticien_Format);
             // 
-            // button1
+            // btnDetail
             // 
-            this.button1.Location = new System.Drawing.Point(280, 89);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Détails";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnDetail.Location = new System.Drawing.Point(280, 89);
+            this.btnDetail.Name = "btnDetail";
+            this.btnDetail.Size = new System.Drawing.Size(75, 23);
+            this.btnDetail.TabIndex = 8;
+            this.btnDetail.Text = "Détails";
+            this.btnDetail.UseVisualStyleBackColor = true;
+            this.btnDetail.Click += new System.EventHandler(this.BtnDetail_Click);
             // 
             // button2
             // 
@@ -169,19 +176,12 @@
             this.button5.Text = "Fermer";
             this.button5.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // txtNumRapport
             // 
-            this.textBox1.Location = new System.Drawing.Point(138, 57);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 13;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(138, 186);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 15;
+            this.txtNumRapport.Location = new System.Drawing.Point(138, 57);
+            this.txtNumRapport.Name = "txtNumRapport";
+            this.txtNumRapport.Size = new System.Drawing.Size(100, 20);
+            this.txtNumRapport.TabIndex = 13;
             // 
             // textBox4
             // 
@@ -210,21 +210,37 @@
             this.dtpRapport.Size = new System.Drawing.Size(200, 20);
             this.dtpRapport.TabIndex = 18;
             // 
+            // bsRapport
+            // 
+            this.bsRapport.CurrentChanged += new System.EventHandler(this.BsRapport_CurrentChanged);
+            // 
+            // cboMotif
+            // 
+            this.cboMotif.FormattingEnabled = true;
+            this.cboMotif.Location = new System.Drawing.Point(138, 186);
+            this.cboMotif.Name = "cboMotif";
+            this.cboMotif.Size = new System.Drawing.Size(121, 21);
+            this.cboMotif.TabIndex = 19;
+            // 
+            // bsOffrir
+            // 
+            this.bsOffrir.CurrentChanged += new System.EventHandler(this.BsOffrir_CurrentChanged);
+            // 
             // CompteRendu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cboMotif);
             this.Controls.Add(this.dtpRapport);
             this.Controls.Add(this.dgvPracticien);
             this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtNumRapport);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnDetail);
             this.Controls.Add(this.cboPracticien);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -238,6 +254,9 @@
             this.Load += new System.EventHandler(this.CompteRendu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPracticien)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsPracticien)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsRapport)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsMotif)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsOffrir)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -253,16 +272,19 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cboPracticien;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnDetail;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtNumRapport;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.DataGridView dgvPracticien;
         private System.Windows.Forms.BindingSource bsPracticien;
         private System.Windows.Forms.DateTimePicker dtpRapport;
+        private System.Windows.Forms.BindingSource bsRapport;
+        private System.Windows.Forms.ComboBox cboMotif;
+        private System.Windows.Forms.BindingSource bsMotif;
+        private System.Windows.Forms.BindingSource bsOffrir;
     }
 }

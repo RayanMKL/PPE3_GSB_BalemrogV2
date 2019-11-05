@@ -18,5 +18,28 @@ namespace PPE3_GSB_BalemrogV2
         {
             return maCo.MEDECIN.ToList();
         }
+
+        public static List<MOTIF> listemotif()
+        {
+            return maCo.MOTIF.ToList();
+        }
+
+        public static List<OFFRIR> listeoffrir()
+        {
+            return maCo.OFFRIR.ToList();
+        }
+
+        public static List<RAPPORT> listerapport()
+        {
+            return maCo.RAPPORT.ToList();
+        }
+
+        public static Object Medocs()
+        {
+            var LQuery = maCo.OFFRIR.ToList()
+                           .Select(x => new { x.idMedicament, x.quantite })
+                           .OrderBy(x => x.idMedicament);
+            return LQuery.ToList();
+        }
     }
 }
