@@ -39,6 +39,7 @@
             this.comptesrendusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.visiteursToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mission3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lesVisiteurToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -92,7 +93,8 @@
             // mission1ToolStripMenuItem
             // 
             this.mission1ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.profilToolStripMenuItem});
+            this.profilToolStripMenuItem,
+            this.lesVisiteurToolStripMenuItem});
             this.mission1ToolStripMenuItem.Name = "mission1ToolStripMenuItem";
             this.mission1ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.mission1ToolStripMenuItem.Text = "Mission 1";
@@ -100,7 +102,7 @@
             // profilToolStripMenuItem
             // 
             this.profilToolStripMenuItem.Name = "profilToolStripMenuItem";
-            this.profilToolStripMenuItem.Size = new System.Drawing.Size(102, 22);
+            this.profilToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.profilToolStripMenuItem.Text = "Profil";
             this.profilToolStripMenuItem.Click += new System.EventHandler(this.ProfilToolStripMenuItem_Click);
             // 
@@ -117,14 +119,14 @@
             // comptesrendusToolStripMenuItem
             // 
             this.comptesrendusToolStripMenuItem.Name = "comptesrendusToolStripMenuItem";
-            this.comptesrendusToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.comptesrendusToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.comptesrendusToolStripMenuItem.Text = "Comptes-rendus";
             this.comptesrendusToolStripMenuItem.Click += new System.EventHandler(this.ComptesrendusToolStripMenuItem_Click);
             // 
             // visiteursToolStripMenuItem
             // 
             this.visiteursToolStripMenuItem.Name = "visiteursToolStripMenuItem";
-            this.visiteursToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.visiteursToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.visiteursToolStripMenuItem.Text = "Visiteurs";
             // 
             // mission3ToolStripMenuItem
@@ -133,6 +135,13 @@
             this.mission3ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.mission3ToolStripMenuItem.Text = "Mission 3";
             this.mission3ToolStripMenuItem.Click += new System.EventHandler(this.Mission3ToolStripMenuItem_Click);
+            // 
+            // lesVisiteurToolStripMenuItem
+            // 
+            this.lesVisiteurToolStripMenuItem.Name = "lesVisiteurToolStripMenuItem";
+            this.lesVisiteurToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.lesVisiteurToolStripMenuItem.Text = "Les visiteurs";
+            this.lesVisiteurToolStripMenuItem.Click += new System.EventHandler(this.LesVisiteurToolStripMenuItem_Click);
             // 
             // Menu
             // 
@@ -167,6 +176,7 @@
         private System.Windows.Forms.ToolStripMenuItem profilToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem comptesrendusToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem visiteursToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem lesVisiteurToolStripMenuItem;
     }
 }
 

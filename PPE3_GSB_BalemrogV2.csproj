@@ -90,6 +90,12 @@
     <Compile Include="FModifmdp.Designer.cs">
       <DependentUpon>FModifmdp.cs</DependentUpon>
     </Compile>
+    <Compile Include="FVisiteurs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FVisiteurs.Designer.cs">
+      <DependentUpon>FVisiteurs.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -193,6 +199,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FModifmdp.resx">
       <DependentUpon>FModifmdp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FVisiteurs.resx">
+      <DependentUpon>FVisiteurs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>

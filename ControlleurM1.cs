@@ -114,6 +114,43 @@ namespace PPE3_GSB_BalemrogV2
 
         }
 
+        public static Object regionParSecteur(int idSecteur)
+        {
+            var LQuery = maConn.Region.ToList()
+                          .Where(x => x.idSecteur == idSecteur)
+                          .Select(x => new { x.idRegion, x.libRegion,})
+                          .OrderBy(x => x.idRegion);
+            return LQuery.ToList();
+
+        }
+
+
+        public static bool modifierMDP(string nouveauMDP)
+        {
+            bool vretour = true;
+
+            leVisiteurCo.password = GetMd5Hash(nouveauMDP);
+
+            try
+            {
+                maConn.SaveChanges();
+            }
+            catch (Exception e)
+            {
+                System.Windows.Forms.MessageBox.Show(e.Message + " " + e.InnerException.InnerException.Message);
+                vretour = false;
+
+            }
+
+            return vretour;
+        }
+
+        public static List<Secteur> listeSecteur()
+        {
+            return maConn.Secteur.ToList();
+        }
+
+
 
 
         }

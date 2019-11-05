@@ -244,6 +244,7 @@
             this.Controls.Add(this.btnAnnuler);
             this.Name = "ProfilVisiteur";
             this.Text = "ProfilVisiteur";
+            this.Load += new System.EventHandler(this.ProfilVisiteur_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bsVisiteur)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResponsabilité)).EndInit();
             this.ResumeLayout(false);
