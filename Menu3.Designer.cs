@@ -28,12 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.LabMission3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvListeFiche = new System.Windows.Forms.DataGridView();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnModif = new System.Windows.Forms.Button();
+            this.bsFicheFrais = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListeFiche)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsFicheFrais)).BeginInit();
             this.SuspendLayout();
             // 
             // LabMission3
@@ -99,6 +102,7 @@
             this.Text = "Menu3";
             this.Load += new System.EventHandler(this.Menu3_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListeFiche)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsFicheFrais)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -111,5 +115,6 @@
         private System.Windows.Forms.DataGridView dgvListeFiche;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnModif;
+        private System.Windows.Forms.BindingSource bsFicheFrais;
     }
 }
