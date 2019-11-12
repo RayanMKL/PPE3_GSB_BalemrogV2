@@ -104,6 +104,7 @@ namespace PPE3_GSB_BalemrogV2
             return vretour;
         }
 
+        //Methode recupere toutes les responsabilités par visiteur
         public static Object responsabilitéParVisiteur(string idV)
         {
             var LQuery = maConn.Region.ToList()
@@ -114,6 +115,7 @@ namespace PPE3_GSB_BalemrogV2
 
         }
 
+        // Methode recupere liste de toutes les regions par secteur
         public static Object regionParSecteur(int idSecteur)
         {
             var LQuery = maConn.Region.ToList()
@@ -124,7 +126,7 @@ namespace PPE3_GSB_BalemrogV2
 
         }
 
-
+        //Methode Modfier Mot de passe
         public static bool modifierMDP(string nouveauMDP)
         {
             bool vretour = true;
@@ -150,7 +152,45 @@ namespace PPE3_GSB_BalemrogV2
             return maConn.Secteur.ToList();
         }
 
+        public static List<Region> listeRegions()
+        {
+            return maConn.Region.ToList();
+        }
 
+        public static List<Laboratoire> listeLabo()
+        {
+            return maConn.Laboratoire.ToList();
+        }
+
+        //Methode verifie si l'utilistateur courant est un responsable
+       /* public static bool verifResponsableLabo()
+        {
+            
+            bool vretour = false;
+            foreach(Laboratoire unLab in listeLabo())
+            {
+                if(unLab.Visiteur.lis)
+            }
+            return vretour;
+        }
+
+    */
+
+        //Methode veridie si l'utilisateur courant est un responsable de secteur
+        
+        public static bool verifResponsableSecteur()
+        {
+            bool vretour = false;
+            foreach(Region uneRegion in listeRegions())
+            {
+                if(uneRegion.Visiteur.idVisiteur == leVisiteurCo.idVisiteur)
+                {
+                    vretour = true;
+                    break;
+                }
+            }
+            return vretour;
+        }
 
 
         }

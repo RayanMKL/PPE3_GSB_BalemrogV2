@@ -53,13 +53,25 @@ namespace PPE3_GSB_BalemrogV2
 
         private void Menu_Load(object sender, EventArgs e)
         {
+           // if(ControlleurM1.leVisiteurCo.Laboratoire )
 
+            //Si 
+           if(!(ControlleurM1.verifResponsableSecteur()))
+            {
+                gestionDesRegionsToolStripMenuItem.Enabled = false;
+            }
         }
 
         private void LesVisiteurToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FVisiteurs fv = new FVisiteurs();
             fv.Show();
+        }
+
+        private void GestionDesRegionsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FGestionRegions FgéréR = new FGestionRegions();
+            FgéréR.Show();
         }
     }
 }
