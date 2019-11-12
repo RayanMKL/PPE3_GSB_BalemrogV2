@@ -18,5 +18,12 @@ namespace PPE3_GSB_BalemrogV2
         {
             return maCo.fichefrais.ToList();
         }
+
+        public static List<fichefrais> listeFicheFraisCourant()
+        {
+            return ControlleurM1.leVisiteurCo.fichefrais.ToList();
+
+        }
+
     }
 }

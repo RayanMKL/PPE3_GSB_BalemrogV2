@@ -65,7 +65,7 @@
             this.dgvListeFiche.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvListeFiche.Location = new System.Drawing.Point(20, 85);
             this.dgvListeFiche.Name = "dgvListeFiche";
-            this.dgvListeFiche.Size = new System.Drawing.Size(415, 279);
+            this.dgvListeFiche.Size = new System.Drawing.Size(437, 279);
             this.dgvListeFiche.TabIndex = 2;
             // 
             // btnAdd
@@ -80,13 +80,17 @@
             // 
             // btnModif
             // 
-            this.btnModif.Location = new System.Drawing.Point(275, 393);
+            this.btnModif.Location = new System.Drawing.Point(305, 393);
             this.btnModif.Name = "btnModif";
             this.btnModif.Size = new System.Drawing.Size(75, 23);
             this.btnModif.TabIndex = 4;
             this.btnModif.Text = "Modifier";
             this.btnModif.UseVisualStyleBackColor = true;
             this.btnModif.Click += new System.EventHandler(this.BtnModif_Click);
+            // 
+            // bsFicheFrais
+            // 
+            this.bsFicheFrais.CurrentChanged += new System.EventHandler(this.BsFicheFrais_CurrentChanged);
             // 
             // Menu3
             // 
