@@ -28,7 +28,7 @@ namespace PPE3_GSB_BalemrogV2
             dgvListeFiche.Columns[8].Visible = false;
             dgvListeFiche.Columns[9].Visible = false;
 
-
+            
         }
 
         private void BtnModif_Click(object sender, EventArgs e)

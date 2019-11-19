@@ -15,6 +15,12 @@ namespace PPE3_GSB_BalemrogV2
         public Mission3Add()
         {
             InitializeComponent();
+
+            cbChoixTransport.Items.Add("essence") ;
+            cbChoixTransport.Items.Add("diesel");
+            cbChoixTransport.Items.Add("electrique");
+            cbChoixTransport.Items.Add("hybride");
+            cbChoixTransport.Items.Add("moto");
         }
     }
 }

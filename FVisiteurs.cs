@@ -43,7 +43,7 @@ namespace PPE3_GSB_BalemrogV2
         {
             Region r = (Region)bsRegions.Current;
 
-            bsVisiteurs.DataSource = r.Visiteur
+           // bsVisiteurs.DataSource = r.Visiteur
 
            
 
