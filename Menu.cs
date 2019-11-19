@@ -19,7 +19,7 @@ namespace PPE3_GSB_BalemrogV2
 
         private void Mission1ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void Mission3ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -36,7 +36,7 @@ namespace PPE3_GSB_BalemrogV2
 
         private void RésponsabilitéToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void Mission2ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -53,10 +53,10 @@ namespace PPE3_GSB_BalemrogV2
 
         private void Menu_Load(object sender, EventArgs e)
         {
-           // if(ControlleurM1.leVisiteurCo.Laboratoire )
+            // if(ControlleurM1.leVisiteurCo.Laboratoire )
 
             //Si 
-           if(!(ControlleurM1.verifResponsableSecteur()))
+            if (!(ControlleurM1.verifResponsableSecteur()))
             {
                 gestionDesRegionsToolStripMenuItem.Enabled = false;
             }
@@ -72,6 +72,11 @@ namespace PPE3_GSB_BalemrogV2
         {
             FGestionRegions FgéréR = new FGestionRegions();
             FgéréR.Show();
+        }
+
+        private void LesSecteursToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
