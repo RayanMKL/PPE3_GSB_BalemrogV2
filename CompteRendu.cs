@@ -17,6 +17,8 @@ namespace PPE3_GSB_BalemrogV2
         {
             InitializeComponent();
             bsPracticien.DataSource = ControlleurM2.listepracticien();
+            RAPPORT r = (RAPPORT)bsRapport.Current;
+            bsRapport.DataSource = ControlleurM2.listerapport();
             OFFRIR c = (OFFRIR)bsOffrir.Current;
             bsOffrir.DataSource = ControlleurM2.Medocs();
             dgvPracticien.DataSource = bsOffrir;
@@ -54,12 +56,19 @@ namespace PPE3_GSB_BalemrogV2
         private void BsRapport_CurrentChanged(object sender, EventArgs e)
         {
             RAPPORT r = (RAPPORT)bsRapport.Current;
-            txtNumRapport.Text = r.idRapport.ToString();
+            int i = int.Parse(txtNumRapport.Text);
+            txtNumRapport.Text = ControlleurM2.trouverRapport(i);
+            txtBilan.Text = r.bilan;
         }
 
         private void BsOffrir_CurrentChanged(object sender, EventArgs e)
         {
             
+        }
+
+        private void Button5_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

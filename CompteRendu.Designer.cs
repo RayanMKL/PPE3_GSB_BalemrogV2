@@ -43,7 +43,7 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.txtNumRapport = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtBilan = new System.Windows.Forms.TextBox();
             this.dgvPracticien = new System.Windows.Forms.DataGridView();
             this.bsPracticien = new System.Windows.Forms.BindingSource(this.components);
             this.dtpRapport = new System.Windows.Forms.DateTimePicker();
@@ -142,7 +142,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(128, 363);
+            this.button2.Location = new System.Drawing.Point(263, 54);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 9;
@@ -151,7 +151,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(220, 363);
+            this.button3.Location = new System.Drawing.Point(354, 54);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 10;
@@ -160,7 +160,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(318, 363);
+            this.button4.Location = new System.Drawing.Point(138, 341);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 11;
@@ -175,6 +175,7 @@
             this.button5.TabIndex = 12;
             this.button5.Text = "Fermer";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.Button5_Click);
             // 
             // txtNumRapport
             // 
@@ -183,13 +184,13 @@
             this.txtNumRapport.Size = new System.Drawing.Size(100, 20);
             this.txtNumRapport.TabIndex = 13;
             // 
-            // textBox4
+            // txtBilan
             // 
-            this.textBox4.Location = new System.Drawing.Point(138, 227);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(174, 92);
-            this.textBox4.TabIndex = 16;
+            this.txtBilan.Location = new System.Drawing.Point(138, 227);
+            this.txtBilan.Multiline = true;
+            this.txtBilan.Name = "txtBilan";
+            this.txtBilan.Size = new System.Drawing.Size(174, 92);
+            this.txtBilan.TabIndex = 16;
             // 
             // dgvPracticien
             // 
@@ -234,7 +235,7 @@
             this.Controls.Add(this.cboMotif);
             this.Controls.Add(this.dtpRapport);
             this.Controls.Add(this.dgvPracticien);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtBilan);
             this.Controls.Add(this.txtNumRapport);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
@@ -278,7 +279,7 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TextBox txtNumRapport;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtBilan;
         private System.Windows.Forms.DataGridView dgvPracticien;
         private System.Windows.Forms.BindingSource bsPracticien;
         private System.Windows.Forms.DateTimePicker dtpRapport;

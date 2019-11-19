@@ -9,6 +9,7 @@ namespace PPE3_GSB_BalemrogV2
     public static class ControlleurM2
     {
         private static BalemrogBDDEntities maCo;
+        public static RAPPORT LeRapport;
         public static void init()
         {
             maCo = new BalemrogBDDEntities();
@@ -33,6 +34,13 @@ namespace PPE3_GSB_BalemrogV2
             return maCo.OFFRIR.ToList();
         }
 
+        public static void trouverRapport(int id)
+        {
+            var Lquery = maCo.RAPPORT.ToList()
+                .Where(x => x.idRapport == id);
+
+            LeRapport = (RAPPORT)Lquery.ToList().First();
+        }
         public static List<RAPPORT> listerapport()
         {
             return maCo.RAPPORT.ToList();
