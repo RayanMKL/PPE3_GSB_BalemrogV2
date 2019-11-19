@@ -21,11 +21,5 @@ namespace PPE3_GSB_BalemrogV2
         {
 
         }
-
-        private void CompteRenduToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            CompteRendu c1 = new CompteRendu();
-            c1.Show();
-        }
     }
 }
