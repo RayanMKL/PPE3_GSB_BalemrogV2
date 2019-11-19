@@ -35,11 +35,13 @@
             this.missionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mission1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.profilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lesVisiteurToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mission2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.comptesrendusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.visiteursToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mission3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lesVisiteurToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lesSecteursToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gestionDesRegionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -94,7 +96,9 @@
             // 
             this.mission1ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.profilToolStripMenuItem,
-            this.lesVisiteurToolStripMenuItem});
+            this.lesVisiteurToolStripMenuItem,
+            this.lesSecteursToolStripMenuItem,
+            this.gestionDesRegionsToolStripMenuItem});
             this.mission1ToolStripMenuItem.Name = "mission1ToolStripMenuItem";
             this.mission1ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.mission1ToolStripMenuItem.Text = "Mission 1";
@@ -102,9 +106,16 @@
             // profilToolStripMenuItem
             // 
             this.profilToolStripMenuItem.Name = "profilToolStripMenuItem";
-            this.profilToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.profilToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
             this.profilToolStripMenuItem.Text = "Profil";
             this.profilToolStripMenuItem.Click += new System.EventHandler(this.ProfilToolStripMenuItem_Click);
+            // 
+            // lesVisiteurToolStripMenuItem
+            // 
+            this.lesVisiteurToolStripMenuItem.Name = "lesVisiteurToolStripMenuItem";
+            this.lesVisiteurToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.lesVisiteurToolStripMenuItem.Text = "Les visiteurs";
+            this.lesVisiteurToolStripMenuItem.Click += new System.EventHandler(this.LesVisiteurToolStripMenuItem_Click);
             // 
             // mission2ToolStripMenuItem
             // 
@@ -136,12 +147,18 @@
             this.mission3ToolStripMenuItem.Text = "Mission 3";
             this.mission3ToolStripMenuItem.Click += new System.EventHandler(this.Mission3ToolStripMenuItem_Click);
             // 
-            // lesVisiteurToolStripMenuItem
+            // lesSecteursToolStripMenuItem
             // 
-            this.lesVisiteurToolStripMenuItem.Name = "lesVisiteurToolStripMenuItem";
-            this.lesVisiteurToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.lesVisiteurToolStripMenuItem.Text = "Les visiteurs";
-            this.lesVisiteurToolStripMenuItem.Click += new System.EventHandler(this.LesVisiteurToolStripMenuItem_Click);
+            this.lesSecteursToolStripMenuItem.Name = "lesSecteursToolStripMenuItem";
+            this.lesSecteursToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.lesSecteursToolStripMenuItem.Text = "Gestion des secteurs";
+            // 
+            // gestionDesRegionsToolStripMenuItem
+            // 
+            this.gestionDesRegionsToolStripMenuItem.Name = "gestionDesRegionsToolStripMenuItem";
+            this.gestionDesRegionsToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.gestionDesRegionsToolStripMenuItem.Text = "Gestion des regions";
+            this.gestionDesRegionsToolStripMenuItem.Click += new System.EventHandler(this.GestionDesRegionsToolStripMenuItem_Click);
             // 
             // Menu
             // 
@@ -177,6 +194,8 @@
         private System.Windows.Forms.ToolStripMenuItem comptesrendusToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem visiteursToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem lesVisiteurToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem lesSecteursToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gestionDesRegionsToolStripMenuItem;
     }
 }
 

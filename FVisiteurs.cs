@@ -33,16 +33,19 @@ namespace PPE3_GSB_BalemrogV2
             cboRegion.ValueMember = "idRegion";
             cboRegion.DisplayMember = "libRegion";
             cboRegion.DataSource = bsRegions;
-            
+
+            txtNomResS.Text = s.Visiteur.nom;
+            txtPrenomResS.Text = s.Visiteur.prenom;
+            txtIdResS.Text = s.Visiteur.identifiant;
         }
 
         private void BsVisiteurs_CurrentChanged(object sender, EventArgs e)
         {
             Region r = (Region)bsRegions.Current;
 
-            //bsVisiteurs.DataSource = r.Visiteur
+            bsVisiteurs.DataSource = r.Visiteur
 
-            
+           
 
         }
     }

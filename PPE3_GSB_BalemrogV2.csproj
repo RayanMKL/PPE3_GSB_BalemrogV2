@@ -87,6 +87,12 @@
     <Compile Include="FDetail.Designer.cs">
       <DependentUpon>FDetail.cs</DependentUpon>
     </Compile>
+    <Compile Include="FGestionRegions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FGestionRegions.Designer.cs">
+      <DependentUpon>FGestionRegions.cs</DependentUpon>
+    </Compile>
     <Compile Include="fichefrais.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -202,6 +208,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FConnex.resx">
       <DependentUpon>FConnex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FGestionRegions.resx">
+      <DependentUpon>FGestionRegions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FModifmdp.resx">
       <DependentUpon>FModifmdp.cs</DependentUpon>
