@@ -23,10 +23,6 @@ namespace PPE3_GSB_BalemrogV2
         {
             return maCo.MOTIF.ToList();
         }
-        public static List<SPECIALITE> listespecialite()
-        {
-            return maCo.SPECIALITE.ToList();
-        }
 
         public static List<OFFRIR> listeoffrir()
         {

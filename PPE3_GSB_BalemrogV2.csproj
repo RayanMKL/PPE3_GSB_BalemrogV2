@@ -96,12 +96,6 @@
     <Compile Include="FModifmdp.Designer.cs">
       <DependentUpon>FModifmdp.cs</DependentUpon>
     </Compile>
-    <Compile Include="FRapport.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FRapport.Designer.cs">
-      <DependentUpon>FRapport.cs</DependentUpon>
-    </Compile>
     <Compile Include="FVisiteurs.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -208,9 +202,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FConnex.resx">
       <DependentUpon>FConnex.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FDetail.resx">
-      <DependentUpon>FDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FModifmdp.resx">
       <DependentUpon>FModifmdp.cs</DependentUpon>
