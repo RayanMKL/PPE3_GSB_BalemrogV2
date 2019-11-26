@@ -48,6 +48,8 @@
             this.lblNewRes = new System.Windows.Forms.Label();
             this.dgvNewResponsable = new System.Windows.Forms.DataGridView();
             this.btnValiderRes = new System.Windows.Forms.Button();
+            this.lblRespNew = new System.Windows.Forms.Label();
+            this.txtNewResp = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.bsRegion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsResponsables)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNewResponsable)).BeginInit();
@@ -181,15 +183,21 @@
             // 
             this.bsRegion.CurrentChanged += new System.EventHandler(this.BsRegion_CurrentChanged);
             // 
+            // bsResponsables
+            // 
+            this.bsResponsables.CurrentChanged += new System.EventHandler(this.BsResponsables_CurrentChanged);
+            // 
             // lblNewRes
             // 
             this.lblNewRes.AutoSize = true;
-            this.lblNewRes.Location = new System.Drawing.Point(266, 315);
+            this.lblNewRes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNewRes.Location = new System.Drawing.Point(279, 318);
             this.lblNewRes.Name = "lblNewRes";
-            this.lblNewRes.Size = new System.Drawing.Size(175, 13);
+            this.lblNewRes.Size = new System.Drawing.Size(314, 20);
             this.lblNewRes.TabIndex = 15;
-            this.lblNewRes.Text = "Nouveau responsable de la region :";
+            this.lblNewRes.Text = "Selectionnez un nouveau responsable";
             this.lblNewRes.Visible = false;
+            this.lblNewRes.Click += new System.EventHandler(this.LblNewRes_Click);
             // 
             // dgvNewResponsable
             // 
@@ -199,6 +207,7 @@
             this.dgvNewResponsable.Size = new System.Drawing.Size(356, 150);
             this.dgvNewResponsable.TabIndex = 16;
             this.dgvNewResponsable.Visible = false;
+            this.dgvNewResponsable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvNewResponsable_CellContentClick);
             // 
             // btnValiderRes
             // 
@@ -211,11 +220,31 @@
             this.btnValiderRes.Visible = false;
             this.btnValiderRes.Click += new System.EventHandler(this.BtnValiderRes_Click);
             // 
+            // lblRespNew
+            // 
+            this.lblRespNew.AutoSize = true;
+            this.lblRespNew.Location = new System.Drawing.Point(44, 376);
+            this.lblRespNew.Name = "lblRespNew";
+            this.lblRespNew.Size = new System.Drawing.Size(117, 13);
+            this.lblRespNew.TabIndex = 18;
+            this.lblRespNew.Text = "Nouveau responsable :";
+            this.lblRespNew.Visible = false;
+            // 
+            // txtNewResp
+            // 
+            this.txtNewResp.Location = new System.Drawing.Point(51, 403);
+            this.txtNewResp.Name = "txtNewResp";
+            this.txtNewResp.Size = new System.Drawing.Size(100, 20);
+            this.txtNewResp.TabIndex = 19;
+            this.txtNewResp.Visible = false;
+            // 
             // FGestionRegions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 623);
+            this.Controls.Add(this.txtNewResp);
+            this.Controls.Add(this.lblRespNew);
             this.Controls.Add(this.btnValiderRes);
             this.Controls.Add(this.dgvNewResponsable);
             this.Controls.Add(this.lblNewRes);
@@ -265,5 +294,7 @@
         private System.Windows.Forms.Label lblNewRes;
         private System.Windows.Forms.DataGridView dgvNewResponsable;
         private System.Windows.Forms.Button btnValiderRes;
+        private System.Windows.Forms.Label lblRespNew;
+        private System.Windows.Forms.TextBox txtNewResp;
     }
 }

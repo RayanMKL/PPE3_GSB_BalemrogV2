@@ -125,14 +125,23 @@ namespace PPE3_GSB_BalemrogV2
             return LQuery.ToList();
 
         }
-        // Methode recupere liste de toutes les visiteur par region
-        public static Object regionParID(int idRegion)
+        // Methode recupere une region par son id
+        public static Region regionParID(int idRegion)
         {
             var LQuery = maConn.Region.ToList()
                           .Where(x => x.idRegion == idRegion)
-                          .Select(x => new { x.idRegion, x.libRegion, x.idVisiteur, x.Visiteur ,x.Visiteur1})
-                          .OrderBy(x => x.idRegion);
-            return LQuery.ToList();
+                           .OrderBy(x => x.idRegion);
+            return LQuery.ToList().First();
+
+        }
+
+        // Methode recupere une region par son id
+        public static Visiteur visiteurParID(string UnIdVisiteur)
+        {
+            var LQuery = maConn.Visiteur.ToList()
+                          .Where(x => x.idVisiteur == UnIdVisiteur)
+                           .OrderBy(x => x.idVisiteur);
+            return LQuery.ToList().First();
 
         }
 
@@ -225,15 +234,17 @@ namespace PPE3_GSB_BalemrogV2
         public static bool modifResponsableRegion(int idRegion, string idVisiteur)
         {
             bool vretour = true;
-            Region r = regionParID(idRegion);
-            try
+             Region r = regionParID(idRegion);
+            r.Visiteur = visiteurParID(idVisiteur);            
+           try
             {
-                 = idVisiteur;
+                maConn.SaveChanges();
             }
             catch (Exception e)
             {
                 System.Windows.Forms.MessageBox.Show(e.Message + " " + e.InnerException.InnerException.Message);
                 vretour = false;
+
             }
 
             return vretour;

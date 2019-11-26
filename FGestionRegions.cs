@@ -59,9 +59,38 @@ namespace PPE3_GSB_BalemrogV2
             lblNewRes.Visible = true;
             dgvNewResponsable.Visible = true;
             btnValiderRes.Visible = true;
+            lblRespNew.Visible = true;
+            txtNewResp.Visible = true;
+           
         }
 
         private void BtnValiderRes_Click(object sender, EventArgs e)
+        {
+            Visiteur newResp = (Visiteur)bsResponsables.Current;
+            Region r = (Region)bsRegion.Current;
+            if (ControlleurM1.modifResponsableRegion(r.idRegion, newResp.idVisiteur))
+            {
+                MessageBox.Show("La modification a été effectuée");
+            }
+            else
+            {
+                MessageBox.Show("Erreur");
+            }
+        }
+
+        private void DgvNewResponsable_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void BsResponsables_CurrentChanged(object sender, EventArgs e)
+        {
+            Visiteur newResp = (Visiteur)bsResponsables.Current;
+            txtNewResp.Text = newResp.prenom+newResp.nom;
+
+        }
+
+        private void LblNewRes_Click(object sender, EventArgs e)
         {
 
         }
