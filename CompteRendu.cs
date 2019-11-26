@@ -56,9 +56,10 @@ namespace PPE3_GSB_BalemrogV2
         private void BsRapport_CurrentChanged(object sender, EventArgs e)
         {
             RAPPORT r = (RAPPORT)bsRapport.Current;
-            int i = int.Parse(txtNumRapport.Text);
-            txtNumRapport.Text = ControlleurM2.trouverRapport(i);
+            //int i = int.Parse(txtNumRapport.Text);
+            //txtNumRapport.Text = ControlleurM2.trouverRapport(i);
             txtBilan.Text = r.bilan;
+            //i = r.idRapport;
         }
 
         private void BsOffrir_CurrentChanged(object sender, EventArgs e)

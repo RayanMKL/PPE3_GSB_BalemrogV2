@@ -41,6 +41,16 @@ namespace PPE3_GSB_BalemrogV2
 
             LeRapport = (RAPPORT)Lquery.ToList().First();
         }
+
+        public static Object listeRapportVisiteurMedecin(int Idmedecin)
+        {
+            var Lquery = maCo.RAPPORT.ToList()
+                .Where(x => x.idVisiteur == ControlleurM1.leVisiteurCo.idVisiteur && x.idMedecin == Idmedecin)
+                .Select(x => new { x.dateRapport, x.MEDECIN.nom, x.MEDECIN.prenom, x.idRapport, x.MEDECIN.idMedecin })
+                .OrderBy(x => x.nom);
+            return Lquery.ToList();
+        }
+
         public static List<RAPPORT> listerapport()
         {
             return maCo.RAPPORT.ToList();
