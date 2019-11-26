@@ -49,6 +49,7 @@
             this.nupmidi = new System.Windows.Forms.NumericUpDown();
             this.nupsoir = new System.Windows.Forms.NumericUpDown();
             this.nupkilo = new System.Windows.Forms.NumericUpDown();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.nupetape)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupnuitee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupmidi)).BeginInit();
@@ -230,11 +231,19 @@
             this.nupkilo.Size = new System.Drawing.Size(75, 20);
             this.nupkilo.TabIndex = 25;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(544, 118);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 26;
+            // 
             // Mission3Add
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.nupkilo);
             this.Controls.Add(this.nupsoir);
             this.Controls.Add(this.nupmidi);
@@ -291,5 +300,6 @@
         private System.Windows.Forms.NumericUpDown nupmidi;
         private System.Windows.Forms.NumericUpDown nupsoir;
         private System.Windows.Forms.NumericUpDown nupkilo;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
