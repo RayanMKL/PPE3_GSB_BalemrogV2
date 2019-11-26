@@ -137,7 +137,7 @@
             this.comptesrendusToolStripMenuItem.Name = "comptesrendusToolStripMenuItem";
             this.comptesrendusToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.comptesrendusToolStripMenuItem.Text = "Comptes-rendus";
-            this.comptesrendusToolStripMenuItem.Click += new System.EventHandler(this.ComptesrendusToolStripMenuItem_Click);
+           // this.comptesrendusToolStripMenuItem.Click += new System.EventHandler(this.ComptesrendusToolStripMenuItem_Click);
             // 
             // visiteursToolStripMenuItem
             // 
